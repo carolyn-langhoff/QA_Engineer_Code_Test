@@ -1,7 +1,10 @@
 #This is a Python program written by Carolyn Langhoff to test the To-Do Application
 
 #Imports
-
+import sys
+import React from 'react';
+import './App.css';
+import Todos from './Todo.jsx'
 
 #Variables
 
@@ -13,15 +16,15 @@
 #Create Class
 class ProgrammingTest:
 
-    #Test add button
+    #Test removeItem
+    def testRemoveItem(TodoListItem):
 
 
 
-    #Test remove button
 
+    #Test markTodoDone
+    def testTodoDone(TodoListItem):
 
-
-    #Test check-boxes
 
 
 
