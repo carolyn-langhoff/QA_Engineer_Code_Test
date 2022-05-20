@@ -13,12 +13,21 @@ from webdriver_manager.firefox import GeckoDriverManager
 
 #As a side note and to maintain transparency, I did look up how to open webpages as I had never needed to open a webpage from within my code before.
 
-#Opens the firefox browser and the application thuse demonstrating that the application does run.
+#Opens the firefox browser and the application thus demonstrating that the application does run.
 driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
 driver.maximize_window()
 driver.get("http://localhost:3000") 
 
+#Test ability to create a to-do list item
 
+
+#Test ability to check off or complete a to-do list item
+
+
+#Test ability to uncheck a to-do list item
+
+
+#Test the ability to delete a to-do list item
 
 
 #Keeps the browser open for a moment
