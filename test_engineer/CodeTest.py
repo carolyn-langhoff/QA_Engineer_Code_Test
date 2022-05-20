@@ -11,11 +11,9 @@ import urllib3
 from webdriver_manager.firefox import GeckoDriverManager
 
 
+#As a side note and to maintain transparency, I did look up how to open webpages as I had never needed to open a webpage from within my code before.
 
-
- #The following is a test to make sure selenium, node js, etc. are running correctly
-
-#Opens the firefox browser and the application
+#Opens the firefox browser and the application thuse demonstrating that the application does run.
 driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
 driver.maximize_window()
 driver.get("http://localhost:3000") 
