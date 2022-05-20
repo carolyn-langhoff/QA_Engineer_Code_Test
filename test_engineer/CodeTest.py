@@ -34,9 +34,13 @@ addItemButton.click()
 #Test ability to check off or complete a to-do list item
 #Xpath /html/body/div/div/ul/li[1]/span
 checkBox = driver.find_element_by_xpath('/html/body/div/div/ul/li[1]/span')
+checkBox.click()
+time.sleep(5)
 
 #Test ability to uncheck a to-do list item
-#Xpath /html/body/div/div/ul/li[1]/span
+#Xpath /html/body/div/div/ul/li[4]/span
+checkBox.click() #THIS DOES NOT WORK PROPERLY AT THE MOMENT, SOME TYPE OF STATEMENT NEEDS TO BE IMPLEMENTED TO CHECK/UNCHECK SPECIFIC ITEMS
+time.sleep(5)
 
 #Test the ability to delete a to-do list item
 #Xpath /html/body/div/div/ul/li[1]/button
