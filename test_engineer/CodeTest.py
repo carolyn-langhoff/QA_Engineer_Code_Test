@@ -4,10 +4,12 @@
 from codeop import CommandCompiler
 from msilib.schema import LaunchCondition, SelfReg
 import time
+from typing import KeysView
 from urllib.request import urlopen
 from selenium import webdriver
 from setuptools import Command
 import urllib3
+from selenium.webdriver.common.keys import Keys
 from webdriver_manager.firefox import GeckoDriverManager
 
 
@@ -21,13 +23,13 @@ driver.get("http://localhost:3000")
 #Test ability to create a to-do list item
 #Xpath /html/body/div/div/form/input
 inputBlank = driver.find_element_by_xpath('/html/body/div/div/form/input')
-addItemButton = driver.find_element_by_xpath('/html/body/div/div/ul/li[1]/button')
+addItemButton = driver.find_element_by_xpath('/html/body/div/div/form/button')
 
 #Type new task into the inputBlank
 inputBlank.send_keys("Wash laundry")
-addItemButton.click() #NOT WORKING
+addItemButton.click()
 inputBlank.send_keys("This proves that the application allows the user to create a new item.")
-addItemButton.click() #NOT WORKING
+addItemButton.click() 
 
 #Test ability to check off or complete a to-do list item
 #Xpath /html/body/div/div/ul/li[1]/span
@@ -41,5 +43,5 @@ checkBox = driver.find_element_by_xpath('/html/body/div/div/ul/li[1]/span')
 deleteX = driver.find_element_by_xpath('/html/body/div/div/ul/li[1]/button')
 
 #Keeps the browser open for a moment
-time.sleep(3)
+time.sleep(10)
 driver.quit()

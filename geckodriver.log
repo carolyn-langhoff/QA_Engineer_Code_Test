@@ -262,3 +262,47 @@ DevTools listening on ws://localhost:3729/devtools/browser/b656d9b6-d065-4a62-a9
 Read port: 3754
 1653076522663	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 1653076528357	Marionette	INFO	Stopped listening on port 3754
+1653077926509	geckodriver	INFO	Listening on 127.0.0.1:1236
+1653077929586	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "1237" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\carolyn\\AppData\\Local\\Temp\\rust_mozprofileK5HHmz"
+1653077929995	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\carolyn\\AppData\\Local\\Temp\\rust_mozprofileK5HHmz\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:1237/devtools/browser/47e1b400-b32c-44ca-bfd2-712f0ae3f8ca
+1653077934059	Marionette	INFO	Listening on port 1261
+Read port: 1261
+1653077934148	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653077974531	Marionette	INFO	Stopped listening on port 1261
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1653078040248	geckodriver	INFO	Listening on 127.0.0.1:1346
+1653078043355	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "1347" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\carolyn\\AppData\\Local\\Temp\\rust_mozprofileC22jtX"
+1653078043734	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\carolyn\\AppData\\Local\\Temp\\rust_mozprofileC22jtX\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:1347/devtools/browser/c168d3a8-b5b9-4668-b8ef-4e76a56c123b
+1653078047626	Marionette	INFO	Listening on port 1374
+Read port: 1374
+1653078047810	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1653078078341	Marionette	INFO	Stopped listening on port 1374
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1653078113005	geckodriver	INFO	Listening on 127.0.0.1:1449
+1653078116084	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "1450" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\carolyn\\AppData\\Local\\Temp\\rust_mozprofileQJ3QuU"
+1653078116477	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\carolyn\\AppData\\Local\\Temp\\rust_mozprofileQJ3QuU\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:1450/devtools/browser/4df40dbc-383e-4612-94a0-df6248004182
+1653078120399	Marionette	INFO	Listening on port 1477
+Read port: 1477
+1653078120557	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+1653078126202	Marionette	INFO	Stopped listening on port 1477
+1653078155897	geckodriver	INFO	Listening on 127.0.0.1:1529
+1653078158976	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "1530" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\carolyn\\AppData\\Local\\Temp\\rust_mozprofileMJGiwq"
+1653078159357	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\carolyn\\AppData\\Local\\Temp\\rust_mozprofileMJGiwq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:1530/devtools/browser/bd113803-0cf6-4b0c-a010-878c7c86fe62
+1653078163135	Marionette	INFO	Listening on port 1564
+Read port: 1564
+1653078163278	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+1653078175549	Marionette	INFO	Stopped listening on port 1564
