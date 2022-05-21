@@ -5,11 +5,16 @@ from codeop import CommandCompiler
 from msilib.schema import LaunchCondition, SelfReg
 from pickle import TRUE
 import time
+from token import EQUAL
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from webdriver_manager.firefox import GeckoDriverManager
 
+
+#Variables
+firstItem = "Meal Prep"
+secondItem = "Wash Laundry"
 
 #As a side note and to maintain transparency, I did look up how to open webpages as I had never needed to open a webpage from within my code before.
 
@@ -18,19 +23,29 @@ driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
 driver.maximize_window()
 driver.get("http://localhost:3000") 
 
+
 #Test ability to create a to-do list item
+@pytest.mark.input #Planning to run all tests using markers, I currently only have one test in a method as I am wanting to have it work properly before moving on to my other tests.
+def TestAdd():
+    inputBlank = driver.find_element_by_xpath('/html/body/div/div/form/input')
+    addItemButton = driver.find_element_by_xpath('/html/body/div/div/form/button')
 
+    #Type new task into the inputBlank
+    inputBlank.send_keys("secondItem") 
+    addItemButton.click()
+    inputBlank.send_keys("firstItem") 
+    addItemButton.click()
 
+    #Assigns the Xpath of the first and second todo list items to variables in order to allow validation using assert
+    firstTodo = driver.find_element_by_xpath('/html/body/div/div/ul/li[1]')
+    secondTodo = driver.find_element_by_xpath('/html/body/div/div/ul/li[2]')
 
+    #Used to compare the contents of the first to-do list item and the intended input in order to test the functionality of adding an
+    assert inputBlank.send_keys == TRUE #Attempt to test that the inputBlank is being typed into
+    
+    assert firstItem in firstTodo #Attempt to test that the given input "Meal Prep" is in the first item on the todo list (Should be since this test occurs after both items are added.)
+    assert secondItem == secondTodo #Attempt to test that the second item on the todo list is equal to the variable that was input
 
-inputBlank = driver.find_element_by_xpath('/html/body/div/div/form/input')
-addItemButton = driver.find_element_by_xpath('/html/body/div/div/form/button')
-
-#Type new task into the inputBlank
-inputBlank.send_keys("Wash laundry") 
-addItemButton.click()
-inputBlank.send_keys("Meal Prep") 
-addItemButton.click()
 
 time.sleep(5)
 
