@@ -25,7 +25,7 @@ driver.get("http://localhost:3000")
 
 
 #Test ability to create a to-do list item
-@pytest.mark.input #Planning to run all tests using markers, I currently only have one test in a method as I am wanting to have it work properly before moving on to my other tests.
+@pytest.mark.input #Planning to run all tests using markers
 def TestAdd():
     inputBlank = driver.find_element_by_xpath('/html/body/div/div/form/input')
     addItemButton = driver.find_element_by_xpath('/html/body/div/div/form/button')
@@ -50,29 +50,29 @@ def TestAdd():
 time.sleep(5)
 
 #Test ability to check off or complete a to-do list item
+@pytest.mark.checkBox
+def TestCheckBox():
+    #Xpath /html/body/div/div/ul/li[1]/span
+    checkBox = driver.find_element_by_xpath('/html/body/div/div/ul/li[1]/span')
+    checkBox.click()
+    assert checkBox.checked() == TRUE #Not sure if .checked() will work just testing it
 
+    time.sleep(5)
 
-#Xpath /html/body/div/div/ul/li[1]/span
-checkBox = driver.find_element_by_xpath('/html/body/div/div/ul/li[1]/span')
-checkBox.click()
- 
-time.sleep(5)
-
-#Test ability to uncheck a to-do list item
-
-
-#Re-assigns the fourth list item to "checkBox" for the purposes of testing the ability to uncheck
-checkBox = driver.find_element_by_xpath('/html/body/div/div/ul/li[4]/span')
-checkBox.click() 
-time.sleep(5)
+    #Test ability to uncheck a to-do list item
+    #Re-assigns the fourth list item to "checkBox" for the purposes of testing the ability to uncheck
+    checkBox = driver.find_element_by_xpath('/html/body/div/div/ul/li[4]/span')
+    checkBox.click() 
+    assert checkBox.onClickDone() == "undone" #Different way of testing if the check box is checked/unchecked to see if that works.
+    time.sleep(5)
 
 #Test the ability to delete a to-do list item
-
-
-#Xpath /html/body/div/div/ul/li[1]/button
-deleteX = driver.find_element_by_xpath('/html/body/div/div/ul/li[1]/button')    
-deleteX.click() #Deletes the first item in the todo list
-
+@pytest.mark.delete
+def TestDelete():
+    #Xpath /html/body/div/div/ul/li[1]/button
+    deleteX = driver.find_element_by_xpath('/html/body/div/div/ul/li[1]/button')    
+    deleteX.click() #Deletes the first item in the todo list
+    assert deleteX.onClickClose() == TRUE #Testing to see if the item was deleted, however a new item would be in that spot, so it may not work.
 
 #Keeps the browser open for a moment
 time.sleep(10)
