@@ -2,10 +2,8 @@
 
 #Imports
 from codeop import CommandCompiler
-from msilib.schema import LaunchCondition, SelfReg
 from pickle import TRUE
 import time
-from token import EQUAL
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
